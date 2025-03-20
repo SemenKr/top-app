@@ -1,11 +1,13 @@
 :root {
-	--background: #F5F6F8;
+	--background: #f5f6f8;
 	--color-black: #3b434e;
 	--color-white: #ffffff;
 	--color-primary: #7653fc;
+	--color-primary-hover: #542cf4;
 	--color-red: #fc836d;
 	--color-green: #1dc37e;
-	--color-green-light: #C8F8E4;
+	--color-green-light: #c8f8e4;
+	--color-gray: #ebebeb;
 }
 
 @media (prefers-color-scheme: dark) {
