@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Button, Title, P } from '@/components';
+import { Tag } from '../components/Tag/Tag';
 
 export const metadata = {
 	title: "Главная страница",
@@ -32,6 +33,11 @@ export default function Home() {
 				<P size={ 'l' }>Текст l</P>
 				<P>Текст m</P>
 				<P size={ 's' }>Текст s</P>
+
+				<Tag size={ 's' } color={ 'red' }>Метка red</Tag>
+				<Tag size={ 'm' } color={ 'green' }>Метка green</Tag>
+				<Tag size={ 'm' } color={ 'primary' }>Метка primary</Tag>
+				<Tag size={ 'm' } href={ '#' } color={ 'grey' }>Метка grey</Tag>
 
       </main>
     </div>

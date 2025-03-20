@@ -7,7 +7,7 @@
 	--color-red: #fc836d;
 	--color-green: #1dc37e;
 	--color-green-light: #c8f8e4;
-	--color-gray: #ebebeb;
+	--color-grey-light: #ebebeb;
 }
 
 @media (prefers-color-scheme: dark) {
