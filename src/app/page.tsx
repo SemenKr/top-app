@@ -1,16 +1,19 @@
+'use client'
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Button, Title, P } from '@/components';
 import { Tag } from '../components/Tag/Tag';
+import { useEffect, useState } from 'react';
 
-export const metadata = {
-	title: "Главная страница",
-	description: "Это описание главной страницы",
-	keywords: "Next.js, React, TypeScript, Top, Rating",
-	author: "Sam K.",
-};
 
 export default function Home() {
+
+	const [counter, setCounter] = useState<number>(0);
+	useEffect(() => {
+		console.log('render', counter);
+
+	});
 
 	
   return (
@@ -25,9 +28,9 @@ export default function Home() {
           height={38}
           priority
         />
-				<p>Привет</p>
-				<Button arrow={ 'right' } >Кнопка</Button>
-				<Button arrow={ 'down' } >Кнопка</Button>
+				<p>Привет счетчик { counter }</p>
+				<Button onClick={ () => setCounter(counter + 1) } arrow={ 'right' } >Кнопка</Button>
+				<Button onClick={ () => setCounter(counter - 1) } arrow={ 'down' } >Кнопка</Button>
 				<Button appearances={ 'ghost' }>Кнопка</Button>
 
 				<P size={ 'l' }>Текст l</P>
