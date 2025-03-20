@@ -1,2 +1,3 @@
-export { Button } from './Button/Button';
-export { Title } from './Title/Title';
+export * from './Button/Button';
+export * from './Title/Title';
+export * from './P/P';

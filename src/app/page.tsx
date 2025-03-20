@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Button, Title } from '@/components';
+import { Button, Title, P } from '@/components';
 
 export const metadata = {
 	title: "Главная страница",
@@ -28,6 +28,10 @@ export default function Home() {
 				<Button arrow={ 'right' } >Кнопка</Button>
 				<Button arrow={ 'down' } >Кнопка</Button>
 				<Button appearances={ 'ghost' }>Кнопка</Button>
+
+				<P size={ 'l' }>Текст l</P>
+				<P>Текст m</P>
+				<P size={ 's' }>Текст s</P>
 
       </main>
     </div>
