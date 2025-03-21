@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import { Footer, Header, SideBar } from '@/modules';
 
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
@@ -21,7 +22,15 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${notoSans.variable}`}>
-        {children}
+				<Header />
+				<div>
+					<SideBar />
+					<div>
+						{children}
+					</div>
+				</div>
+        
+				<Footer />
       </body>
     </html>
   );
