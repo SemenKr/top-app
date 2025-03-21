@@ -1,0 +1,16 @@
+.rating {
+	margin: 0;
+	color: var(--color-grey-light);
+} 
+
+.star {
+	color: var(--color-grey-light);
+}
+
+.starWrapper:not(:last-child) {
+	margin-right: 5px;
+}
+
+.filled {
+	color: var(--color-primary);
+}

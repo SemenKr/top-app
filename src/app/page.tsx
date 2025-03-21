@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Button, Title, P } from '@/components';
+import { Button, Title, P, Rating } from '@/components';
 import { Tag } from '../components/Tag/Tag';
 import { useEffect, useState } from 'react';
 
@@ -42,6 +42,7 @@ export default function Home() {
 				<Tag size={ 'm' } color={ 'primary' }>Метка primary</Tag>
 				<Tag size={ 'm' } href={ '#' } color={ 'grey' }>Метка grey</Tag>
 
+				<Rating rating={ 4 } isEditable={ true } />
       </main>
     </div>
   );
