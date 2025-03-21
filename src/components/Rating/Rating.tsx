@@ -14,16 +14,21 @@ export const Rating = ({ isEditable = false, rating, setRating, ...props }: Rati
 	const constructRating = (currentRating: number) => {
 		const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
 			return (
-				<StarIcon key={ i } className={ cn(styles.star, {
-					[styles.filled]: i < currentRating,
-					[styles.editable]: isEditable,
-				}) }
+				<span key={ i }
+					className={ cn(styles.star, {
+						[styles.filled]: i < currentRating,
+						[styles.editable]: isEditable,
+					}) }
 					onMouseEnter={ () => changeDisplay(i + 1) }
 					onMouseLeave={ () => changeDisplay(rating) }
-					onClick={ () => onClick(i + 1)}
-					tabIndex={ isEditable ? 0 : -1 }
-					onKeyDown={ (e: KeyboardEvent<SVGSVGElement>) => isEditable && handleSpace(i + 1, e) }
-				/>
+					onClick={ () => onClick(i + 1) }
+
+				>
+					<StarIcon
+						tabIndex={ isEditable ? 0 : -1 }
+						onKeyDown={ (e: KeyboardEvent<SVGSVGElement>) => isEditable && handleSpace(i + 1, e) }
+					/>
+				</span>
 			);
 		});
 		setRatingArray(updatedArray);
@@ -52,7 +57,7 @@ export const Rating = ({ isEditable = false, rating, setRating, ...props }: Rati
 
 	return (
 		<div{ ...props } >
-			{ ratingArray.map((r, i) => (<span className={ styles.starWrapper } key={ i }>{ r }</span>)) }
+			{ ratingArray.map((r, i) => (<span key={ i }>{ r }</span>)) }
 		</div>
 	);
 };
