@@ -5,12 +5,14 @@ import { FooterProps } from './Footer.props';
 
 export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
 	return (
-		<div className={ cn(styles.header, className, {
+		<div className={ cn(styles.footer, className, {
 		})
 		}
 			{ ...props }
 		>
-			Footer
+			<div>
+				OwlTop © 2020 - 2021 Все права защищены
+			</div>
 		</div>
 	);
 };

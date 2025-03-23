@@ -10,11 +10,11 @@
 	--color-grey-light: #ebebeb;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #0a0a0a;
 	}
-}
+} */
 
 html,
 body {
@@ -40,8 +40,8 @@ a {
 	text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
 	}
-}
+} */
