@@ -27,9 +27,9 @@ export default function RootLayout({
 					<Header className={ styles.header } />
 
 					<SideBar className={ styles.sideBar } />
-					<div className={ styles.body }>
+					<main className={ styles.body }>
 						{ children }
-					</div>
+					</main>
 
 
 					<Footer className={ styles.footer } />

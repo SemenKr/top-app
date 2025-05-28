@@ -19,6 +19,7 @@ export default function Home({ menu }: HomeProps) {
 
 	useEffect(() => {
 		console.log('render');
+		console.log(menu);
 
 	} , []);
 
@@ -53,6 +54,16 @@ export default function Home({ menu }: HomeProps) {
 				{ menu.map(m => (
 					<div key={ m._id.secondCategory }>
 						{ m._id.secondCategory }
+						{/* <ul>
+								{ m.pages.map(p => (
+							<li key={ p._id }>
+								<p>{ p.title }</p>
+								<p>{p.category}</p>
+
+							</li>
+						)) }
+						</ul> */}
+					
 						<hr />
 					</div>
 				)) }
