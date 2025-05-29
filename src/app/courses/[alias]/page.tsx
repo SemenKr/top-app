@@ -22,7 +22,9 @@ export async function generateStaticParams() {
 
 	const menu = await res.json();
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	return menu.flatMap((m: any) =>
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		m.pages.map((p: any) => ({ alias: p.alias }))
 	);
 }
